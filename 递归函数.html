@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 如果一个函数在内部可以调用其本身，那么这个函数是递归函数
+        let i = 0 
+        function fn(){
+            if(i>=6){
+                return
+            }
+            i++
+            console.log(`这是第${i}次`);
+            fn()
+        }
+        fn()
+         const a = new Date()
+         console.log(a);
+        //  Sat Apr 01 2023 15:56:57 GMT+0800 (中国标准时间)
+        // 加上tolocalstring() 就是一个标准化时间
+        function gettime(){
+            const b = new Date().toLocaleString()
+             console.log(b);
+            document.querySelector('div').innerHTML = `
+            ${b} `
+          setTimeout(gettime,1000)
+        }
+        gettime()
+
+        // 用递归实现setinter   settimeout 就是只执行一次的定时器
+
+        // 递归函数 常用return结束 不然栈溢出 进行死递归    
+    </script>
+</body>
+</html>         
